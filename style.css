@@ -12,7 +12,8 @@ body {
 .header {
     position: relative;
     height: 100vh; /* Full screen height */
-    background: url('favazzz.png') no-repeat center center/cover; /* Full image background */
+    background: url('favazzz.png') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire area */
 }
 
 .overlay {
@@ -212,5 +213,13 @@ body {
     }
     50% {
         transform: translateY(-20px);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header {
+        background-size: contain; /* Ensure the image fits within the bounds */
+        background-position: center top; /* Adjust the position for mobile */
     }
 }
