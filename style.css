@@ -6,12 +6,13 @@ body {
     padding: 0;
     background-color: #121212;
     color: #ffffff;
+    overflow-x: hidden; /* Disable horizontal scrolling */
 }
 
 .header {
     position: relative;
     height: 100vh; /* Full screen height */
-    background: url('new_fvz.png') no-repeat center center/cover; /* Full image background */
+    background: url('favazzz.png') no-repeat center center/cover; /* Full image background */
 }
 
 .overlay {
