@@ -14,6 +14,7 @@ body {
     height: 100vh; /* Full screen height */
     background: url('favazzz.png') no-repeat center center;
     background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center center; /* Center the image */
 }
 
 .overlay {
@@ -219,7 +220,7 @@ body {
 /* Media Queries */
 @media (max-width: 768px) {
     .header {
-        background-size: contain; /* Ensure the image fits within the bounds */
-        background-position: center top; /* Adjust the position for mobile */
+        background-size: cover; /* Ensure the image covers the entire area */
+        background-position: center; /* Center the image */
     }
 }
