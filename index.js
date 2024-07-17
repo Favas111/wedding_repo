@@ -1,5 +1,31 @@
-function getRemainingTime(et) {
-    var dt = Date.parse(et) - Date.parse(new Date());
+// Function to adjust background image size based on viewport dimensions
+function adjustBackgroundSize() {
+    var header = document.querySelector('.header');
+    var viewportWidth = window.innerWidth;
+    var viewportHeight = window.innerHeight;
+
+    // Calculate aspect ratio of the viewport
+    var viewportRatio = viewportWidth / viewportHeight;
+
+    // Set the background image size based on aspect ratio
+    if (viewportRatio > 1.5) {
+        // Landscape orientation or wider screens
+        header.style.backgroundSize = 'cover';
+    } else {
+        // Portrait orientation or narrower screens
+        header.style.backgroundSize = 'contain';
+    }
+}
+
+// Initial call to adjust background size on page load
+adjustBackgroundSize();
+
+// Event listener for window resize
+window.addEventListener('resize', adjustBackgroundSize);
+
+// Function to calculate remaining time until a specific end time
+function getRemainingTime(endTime) {
+    var dt = Date.parse(endTime) - Date.parse(new Date());
     var seconds = Math.floor((dt / 1000) % 60);
     var minutes = Math.floor((dt / 1000 / 60) % 60);
     var hours = Math.floor((dt / (1000 * 60 * 60)) % 24);
@@ -7,6 +33,7 @@ function getRemainingTime(et) {
     return { days, hours, minutes, seconds };
 }
 
+// Function to initialize countdown timer
 function initRemainingTime(id, endTime) {
     var clock = document.getElementById(id);
     var daysSpan = clock.querySelector('.days');
@@ -29,5 +56,6 @@ function initRemainingTime(id, endTime) {
     var timeInterval = setInterval(updateRemainingTime, 1000);
 }
 
-var weddingDate = new Date('2024-08-17T16:00:00'); // Set the wedding date and time
+// Set the wedding date and time (adjust as needed)
+var weddingDate = new Date('2024-08-17T16:00:00');
 initRemainingTime('reminder-clock', weddingDate);
