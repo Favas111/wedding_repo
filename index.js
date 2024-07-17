@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     const img = document.getElementById('background-image');
     const header = document.querySelector('.header');
 
