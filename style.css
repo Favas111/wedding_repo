@@ -9,16 +9,23 @@ body {
     overflow-x: hidden; /* Disable horizontal scrolling */
 }
 
+
 .header {
     position: relative;
     height: 100vh; /* Full screen height */
     background: url('favazzz.png') no-repeat center center;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-  }
+    background-position: center center;
+    width: 100vw; /* Full screen width */
+    overflow: hidden; /* Prevent any overflow issues */
+}
+
+@media (max-width: 768px) {
+    .header {
+        background-size: contain; /* Adjust for smaller screens */
+    }
+}
+
 
 .overlay {
     position: absolute;
