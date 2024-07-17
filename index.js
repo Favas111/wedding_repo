@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
 
     function resizeHeader() {
+        const windowAspectRatio = window.innerWidth / window.innerHeight;
         const imgAspectRatio = img.naturalWidth / img.naturalHeight;
-        const headerAspectRatio = header.clientWidth / header.clientHeight;
 
-        if (imgAspectRatio > headerAspectRatio) {
+        if (windowAspectRatio > imgAspectRatio) {
             img.style.width = '100%';
             img.style.height = 'auto';
         } else {
@@ -17,6 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     img.onload = resizeHeader;
     window.addEventListener('resize', resizeHeader);
+    window.addEventListener('orientationchange', resizeHeader);
+
+    // Initial call to set the background image size correctly
+    if (img.complete) {
+        resizeHeader();
+    }
 
     // Countdown logic
     const targetDate = new Date('August 17, 2024 16:00:00').getTime();
