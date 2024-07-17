@@ -8,15 +8,19 @@
 </head>
 <body>
     <div class="header">
-        <div class="overlay"></div>
+        <img id="background-image" src="favazzz.png" alt="Wedding Invitation Background" />
+        <div class="header-content">
+        </div>
     </div>
-    <ul class="container navbar">
-        <li class="circle-behind"><a href="#reminder">Time until Big Day</a></li>
-        <li class="circle-behind"><a href="#wedding-info">The Wedding</a></li>
-    </ul>
-    <div class="section reminder-container" id="reminder">
+    <nav class="navbar">
+        <ul>
+            <li><a href="#reminder">Time until Big Day</a></li>
+            <li><a href="#wedding-info">The Wedding</a></li>
+        </ul>
+    </nav>
+    <section class="reminder-container" id="reminder">
         <h2>Time Remaining until Big Day</h2>
-        <div class="container reminder" id="reminder-clock">
+        <div class="reminder" id="reminder-clock">
             <div>
                 <span class="days">00</span>
                 <div>Days</div>
@@ -34,19 +38,15 @@
                 <div>Seconds</div>
             </div>
         </div>
-        <!-- Love symbols -->
-        <div class="love-symbol">❤️</div>
-    </div>
-    <div class="section wedding" id="wedding-info">
+    </section>
+    <section class="wedding" id="wedding-info">
         <div class="text-container">
             <h2>We invite you to celebrate our wedding at</h2>
             <h3>Syndicate Auditorium, Chemmalasseri</h3>
             <h4>4 PM to 8 PM, 17th August 2024</h4>
-            <button onclick="window.location.href='https://maps.app.goo.gl/xf9KKqKqP3CVcHz79?g_st=iw'">Get Location</button>
+            <a href="https://maps.app.goo.gl/xf9KKqKqP3CVcHz79?g_st=iw" class="location-button">Get Location</a>
         </div>
-        <!-- Love symbols -->
-        <div class="love-symbol">❤️</div>
-    </div>
+    </section>
     <script src="index.js"></script>
 </body>
 </html>

@@ -11,42 +11,62 @@ body {
 
 .header {
     position: relative;
-    height: 100vh; /* Full screen height */
-    background: url('favazzz.png') no-repeat center center;
-    background-size: cover;
-    background-position: center center;
-    width: 100vw; /* Full screen width */
-    overflow: hidden; /* Prevent any overflow issues */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
 }
 
-.overlay {
+#background-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Dark overlay for better text visibility */
+    object-fit: cover; /* Ensures the image covers the entire container */
+    z-index: -1;
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.header-content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1.5rem;
 }
 
 .navbar {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
     background-color: #1f1f1f;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
     margin: 0;
-    width: 100%; /* Ensure navbar takes full width */
+    padding: 0;
 }
 
 .navbar li {
+    display: inline-block;
     margin: 0 15px;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 15px 20px;
-    display: block;
+    font-size: 1.2rem;
+    padding: 10px 20px;
     transition: background-color 0.3s;
 }
 
@@ -54,83 +74,20 @@ body {
     background-color: #ffd700; /* Gold */
 }
 
-.navbar .circle-behind {
-    position: relative;
-}
-
-.navbar .circle-behind::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: #ffd700; /* Gold */
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    z-index: -1;
-    transition: transform 0.3s;
-}
-
-.navbar a:hover::before {
-    transform: scale(1.1);
-}
-
-.section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #1f1f1f;
+.reminder-container,
+.wedding {
     padding: 40px 20px;
-    width: 100%; /* Ensure full width */
     text-align: center;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid #333;
+    background: #1f1f1f;
+    color: #ffffff;
 }
 
-.section:not(:first-of-type) {
-    margin-top: -1px; /* Remove the small gap */
-}
-
-.section h2 {
-    font-size: 2.8rem;
+.reminder-container h2,
+.wedding h2 {
     font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
     color: #ffd700; /* Gold */
     margin-bottom: 20px;
-}
-
-.section h3 {
-    font-size: 2rem;
-    color: #87ceeb; /* Light blue */
-    margin-bottom: 10px;
-}
-
-.section h4 {
-    font-size: 1.5rem;
-    color: #d3d3d3; /* Light grey */
-    margin-bottom: 10px;
-}
-
-.section button {
-    background-color: #ffd700; /* Gold */
-    color: black;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
-}
-
-.section button:hover {
-    background-color: #e6be8a;
-    transform: scale(1.05);
-}
-
-.reminder-container {
-    margin-bottom: 0;
 }
 
 .reminder {
@@ -151,66 +108,23 @@ body {
     color: #ffd700; /* Gold */
 }
 
-.wedding .text-container {
+.text-container {
     margin-bottom: 20px;
 }
 
-/* Love symbols */
-.love-symbol {
-    position: absolute;
-    font-size: 2rem;
-    color: rgba(255, 255, 255, 0.2); /* Pale white */
-    animation: float 10s ease-in-out infinite;
-    user-select: none;
+.location-button {
+    background-color: #ffd700; /* Gold */
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.love-symbol:nth-child(1) {
-    top: 10%;
-    left: 15%;
-    font-size: 3rem;
-    animation-delay: 0s;
-}
-
-.love-symbol:nth-child(2) {
-    top: 25%;
-    right: 20%;
-    font-size: 2.5rem;
-    animation-delay: 2s;
-}
-
-.love-symbol:nth-child(3) {
-    bottom: 20%;
-    left: 10%;
-    font-size: 2rem;
-    animation-delay: 4s;
-}
-
-.love-symbol:nth-child(4) {
-    bottom: 15%;
-    right: 25%;
-    font-size: 3.5rem;
-    animation-delay: 6s;
-}
-
-.love-symbol:nth-child(5) {
-    top: 50%;
-    left: 50%;
-    font-size: 2.8rem;
-    animation-delay: 8s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .header {
-        background-size: contain; /* Adjust for smaller screens */
-    }
+.location-button:hover {
+    background-color: #e6be8a;
+    transform: scale(1.05);
 }
