@@ -4,8 +4,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #ffffff;
+    background: linear-gradient(135deg, #fce4ec, #e8f5e9); /* Pastel pink to green gradient */
+    color: #121212;
     overflow-x: hidden; /* Disable horizontal scrolling */
 }
 
@@ -39,16 +39,21 @@ body {
     font-family: 'Great Vibes', cursive;
     font-size: 3rem;
     margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .header-content p {
     font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .navbar {
-    background-color: #1f1f1f;
+    background-color: rgba(31, 31, 31, 0.8);
     padding: 10px 0;
     text-align: center;
+    backdrop-filter: blur(10px); /* Blurred background effect */
 }
 
 .navbar ul {
@@ -71,22 +76,23 @@ body {
 }
 
 .navbar a:hover {
-    background-color: #ffd700; /* Gold */
+    background-color: #f48fb1; /* Pastel pink */
+    border-radius: 5px;
 }
 
-.reminder-container,
-.wedding {
+.reminder-container {
     padding: 40px 20px;
     text-align: center;
-    background: #1f1f1f;
-    color: #ffffff;
+    background: #ffffff; /* White background */
+    color: #121212;
+    border-top: 5px solid #f48fb1; /* Pastel pink border */
+    border-bottom: 5px solid #f48fb1; /* Pastel pink border */
 }
 
-.reminder-container h2,
-.wedding h2 {
+.reminder-container h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.8rem;
-    color: #ffd700; /* Gold */
+    color: #f48fb1; /* Pastel pink */
     margin-bottom: 20px;
 }
 
@@ -95,17 +101,44 @@ body {
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
+    background: #e8f5e9; /* Light pastel green background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .reminder div {
     display: inline-block;
     text-align: center;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .reminder span {
     display: block;
-    font-size: 3rem;
-    color: #ffd700; /* Gold */
+    font-size: 2.5rem;
+    color: #f48fb1; /* Pastel pink */
+}
+
+.wedding {
+    padding: 40px 20px;
+    text-align: center;
+    background: #e8f5e9; /* Light pastel green background */
+    color: #121212;
+}
+
+.wedding h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    color: #f48fb1; /* Pastel pink */
+    margin-bottom: 20px;
+}
+
+.wedding h3, .wedding h4 {
+    margin: 10px 0;
+    color: #121212;
 }
 
 .text-container {
@@ -113,8 +146,8 @@ body {
 }
 
 .location-button {
-    background-color: #ffd700; /* Gold */
-    color: black;
+    background-color: #f48fb1; /* Pastel pink */
+    color: white;
     border: none;
     padding: 15px 30px;
     font-size: 1.2rem;
@@ -125,7 +158,7 @@ body {
 }
 
 .location-button:hover {
-    background-color: #e6be8a;
+    background-color: #f06292; /* Darker pastel pink */
     transform: scale(1.05);
 }
 
