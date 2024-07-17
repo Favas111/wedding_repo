@@ -76,7 +76,7 @@ body {
 }
 
 .navbar a:hover {
-    background-color: #f48fb1; /* Pastel pink */
+    background-color: #90caf9; /* Pastel blue */
     border-radius: 5px;
 }
 
@@ -85,14 +85,14 @@ body {
     text-align: center;
     background: #ffffff; /* White background */
     color: #121212;
-    border-top: 5px solid #f48fb1; /* Pastel pink border */
-    border-bottom: 5px solid #f48fb1; /* Pastel pink border */
+    border-top: 5px solid #90caf9; /* Pastel blue border */
+    border-bottom: 5px solid #90caf9; /* Pastel blue border */
 }
 
 .reminder-container h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.8rem;
-    color: #f48fb1; /* Pastel pink */
+    color: #90caf9; /* Pastel blue */
     margin-bottom: 20px;
 }
 
@@ -119,7 +119,7 @@ body {
 .reminder span {
     display: block;
     font-size: 2.5rem;
-    color: #f48fb1; /* Pastel pink */
+    color: #90caf9; /* Pastel blue */
 }
 
 .wedding {
@@ -132,7 +132,7 @@ body {
 .wedding h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.8rem;
-    color: #f48fb1; /* Pastel pink */
+    color: #90caf9; /* Pastel blue */
     margin-bottom: 20px;
 }
 
@@ -141,12 +141,17 @@ body {
     color: #121212;
 }
 
+.wedding h4 {
+    margin-bottom: 20px; /* Add margin to create a gap below the h4 element */
+}
+
 .text-container {
     margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 .location-button {
-    background-color: #f48fb1; /* Pastel pink */
+    background-color: #90caf9; /* Pastel blue */
     color: white;
     border: none;
     padding: 15px 30px;
@@ -155,10 +160,11 @@ body {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 20px; /* Add margin to create a gap above the button */
 }
 
 .location-button:hover {
-    background-color: #f06292; /* Darker pastel pink */
+    background-color: #64b5f6; /* Darker pastel blue */
     transform: scale(1.05);
 }
 
